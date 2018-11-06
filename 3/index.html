@@ -66,37 +66,25 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
      
     <script>
+     
       $('h1').css('color', 'red');
-      $('.section-1').css({
-        backgroundColor: 'yellow',
-        color: 'black'
-      });
+      $('.section-1').css('background-color', 'yellow');
 
-      var counter  = $('.counter').text();
-      counter = parseInt(counter);
-      counter = counter + 10;
+      var num = $('.counter').text();
+      num = parseInt(num);
+      num = num + 10;
 
-      $('.counter').text(counter);
+      $('.counter').text(num);
 
-      // console.log(counter);
 
       $('#row-3').on('click', function(){
-        $(this).css('background-color', 'gray');
-        $(this).hide('slow');
+        $(this).css('background-color', 'grey')
+        $(this).fadeOut('slow');
       });
 
+      $('.section-1').children('h1').css('font-size', '2em');
 
-      // forma css: $('section h1').css('font-size', '2em');
-      // forma Javascript:
-      $('section').children('h1').css('font-size', '2em');
-
-
-      //forma Jquery $('table tr').last().css({backgroundColor: 'red'})
-
-      //forma css:
-      $('table tr:last-child').css('background-color', 'red');
-
-
+      $('tbody tr:last-child').css('background-color', 'red')
 
     </script>
 
